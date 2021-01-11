@@ -3,7 +3,7 @@ extern _ft_strlen
 
 section .text
 _ft_strcmp:
-	call _ft_strlen
+	call	_ft_strlen
 	xor		r8, r8
 	xor		rdx, rdx
 	mov		rdx, rax
