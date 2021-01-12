@@ -37,7 +37,15 @@ int		main(void)
 	char *str = "hakam";
 	char *str2 = new_str("hakam hakam");
 	char str3[] = {'h', 'a', 'k', '\0'};
-	char str4[] = "start hakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam end";
+	char str4[] = "start hakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam hakamhakam \
+	hakamhakam end";
 	char *str5 = new_str("hey I'am an allocated string!");
 	char *str6 = "hey I'am a stack string!";
 
@@ -46,7 +54,16 @@ int		main(void)
 	printf(LEN_TEST(""));
 	printf(LEN_TEST("hakam"));
 	printf(LEN_TEST("hakam                   \n     "));
-	printf(LEN_TEST("start hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam end"));
+	printf(LEN_TEST(str4));
+	printf(LEN_TEST(str6));
+	printf(LEN_TEST("start hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam end"));
 
 
 	printf("\033[0;32m\n=============== STRCMP TESTS ===============\n\033[0m");
@@ -64,7 +81,14 @@ int		main(void)
 	printf(CPY_TEST(str_empty, str));
 	free(str_empty);
 	str_empty = new_str_empty(600);
-	printf(CPY_TEST(str_empty, "start hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam end"));
+	printf(CPY_TEST(str_empty, "start hakam hakam hakam hakam hakam hakam hakam\
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam end"));
 	printf(CPY_TEST(str_empty, ""));
 	free(str_empty);
 
@@ -74,7 +98,14 @@ int		main(void)
 	printf(DUP_TEST(str2));
 	printf(DUP_TEST(str3));
 	printf(DUP_TEST(""));
-	printf(DUP_TEST("start hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam end"));
+	printf(DUP_TEST("start hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam end"));
 
 
 	printf("\033[0;32m\n=============== WRITE TESTS ===============\033[0m\n");
@@ -93,9 +124,18 @@ int		main(void)
 	printf("\nM: %zu | O: %zu\n", w1, w2);
 	WRT_TEST(1, ft_strlen(str2), str2, w1, w2)
 	printf("\nM: %zu | O: %zu\n", w1, w2);
-	WRT_TEST(1, 200, "start hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam end", w1, w2)
+	WRT_TEST(1, 200, "start hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam \
+	end", w1, w2)
 	printf("\nM: %zu | O: %zu\n", w1, w2);
-	WRT_TEST(1, 3000, "start hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam end", w1, w2)
+	WRT_TEST(1, 50, "start hakam hakam hakam hakam hakam hakam hakam hakam \
+	hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam hakam end", w1, w2)
 	printf("\nM: %zu | O: %zu\n", w1, w2);
 
 
