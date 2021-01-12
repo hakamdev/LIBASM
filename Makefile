@@ -1,14 +1,16 @@
-all: clean
+all: c
 	@nasm -fmacho64 ft_strdup.asm
 	@nasm -fmacho64 ft_strlen.asm
 	@nasm -fmacho64 ft_strcpy.asm
 	@nasm -fmacho64 ft_strcmp.asm
+	@nasm -fmacho64 ft_write.asm
+	@nasm -fmacho64 ft_read.asm
 
-build:
-	@gcc main.c ft_strdup.o ft_strlen.o ft_strcpy.o ft_strcmp.o
+b:
+	@gcc main.c ft_strdup.o ft_strlen.o ft_strcpy.o ft_strcmp.o ft_write.o ft_read.o
 
-run:
+r:
 	@./a.out
 
-clean:
+c:
 	@rm -rf *.o a.out
